@@ -1,7 +1,7 @@
 ## API4:2023 — Unrestricted Resource Consumption
-**🟠 High** | CWE-307 · CWE-400 · CWE-770
+**🟠 High** | CWE-307 / CWE-400 / CWE-770
 
-> APIs with no rate limits, timeouts, or resource caps  
+> APIs with no rate limits, timeouts, or resource caps
 > are vulnerable to DoS, brute force, and runaway cost attacks.
 
 Note: Renamed from "Lack of Resources & Rate Limiting" (2019). Now explicitly includes excessive API costs (LLM tokens, cloud compute) as a form of resource consumption attack.

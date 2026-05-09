@@ -1,7 +1,7 @@
 ## M06:2024 — Inadequate Privacy Controls
-**🟠 High** | CWE-359 · CWE-200
+**🟠 High** | CWE-359 / CWE-200
 
-> Apps collect, store, or transmit more personal data than necessary  
+> Apps collect, store, or transmit more personal data than necessary
 > without user consent, transparency, or proper data controls.
 
 --

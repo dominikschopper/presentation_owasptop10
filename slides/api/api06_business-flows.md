@@ -1,7 +1,7 @@
 ## API6:2023 — Unrestricted Access to Sensitive Business Flows
-**🟠 High** | CWE-770 · CWE-799
+**🟠 High** | CWE-770 / CWE-799
 
-> APIs expose business-critical flows without compensating controls.  
+> APIs expose business-critical flows without compensating controls.
 > Attackers automate **intended functionality** at inhuman scale.
 
 Note: Unlike DoS (resource consumption), this is about abusing perfectly valid functionality — buying tickets, creating accounts, posting reviews — but doing it faster and at more scale than any human could.

@@ -1,7 +1,7 @@
 ## API5:2023 — Broken Function Level Authorization
-**🟠 High** | CWE-284 · CWE-285
+**🟠 High** | CWE-284 / CWE-285
 
-> APIs don't properly restrict which **functions** a user can invoke.  
+> APIs don't properly restrict which **functions** a user can invoke.
 > Regular users call admin endpoints and succeed.
 
 Note: BFLA = Broken Function Level Authorization. Similar to BOLA but about *functions* not *objects*. BOLA = "can I read someone else's data?", BFLA = "can I perform an action I'm not allowed to do?" Often discovered by reading API docs or JavaScript source that lists admin endpoints.

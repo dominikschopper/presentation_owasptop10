@@ -1,7 +1,7 @@
 ## API3:2023 — Broken Object Property Level Authorization
-**🟠 High** | CWE-213 · CWE-915
+**🟠 High** | CWE-213 / CWE-915
 
-> APIs expose **too many properties** in responses (over-exposure),  
+> APIs expose **too many properties** in responses (over-exposure),
 > or accept **properties they shouldn't** in requests (mass assignment).
 
 Note: Merges two categories from 2019: "Excessive Data Exposure" (returning more fields than needed) and "Mass Assignment" (accepting more fields than intended). Both stem from trusting serialization frameworks too much.
@@ -47,7 +47,7 @@ Note: BOPLA = Broken Object Property Level Authorization — merges two 2019 cat
 - **Impact**: Demonstrated mass assignment risk; led to Rails changing defaults
 
 **HackerOne (2021)**
-- API response included internal field `is_verified` 
+- API response included internal field `is_verified`
 - Enumeration + field revealed unverified security researchers' reports
 - **Impact**: Confidential vulnerability reports exposed
 

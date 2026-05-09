@@ -1,7 +1,7 @@
 ## API1:2023 — Broken Object Level Authorization
-**🔴 Critical** | CWE-284 · CWE-639
+**🔴 Critical** | CWE-284 / CWE-639
 
-> APIs fail to verify that the caller **owns** the object they're requesting.  
+> APIs fail to verify that the caller **owns** the object they're requesting.
 > Attackers enumerate IDs to access other users' resources.
 
 Note: BOLA = IDOR at the API level. Most prevalent API vulnerability — responsible for ~40% of all API attacks. The difference from web IDOR: API responses often return structured data (JSON) that's immediately exploitable.

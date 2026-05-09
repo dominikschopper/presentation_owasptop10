@@ -35,7 +35,32 @@ cipher = AES.new(key, AES.MODE_ECB)
 # → attacker can see structure even without decrypting
 ```
 
-Note: MD5/SHA-1 = cryptographic hash functions, fast by design — which makes them catastrophically bad for passwords (rainbow tables crack them in seconds). ECB = Electronic Codebook — AES mode that encrypts each 16-byte block independently, so identical plaintext blocks produce identical ciphertext. TLS = Transport Layer Security — the encryption protocol behind HTTPS.
+Note:
+- MD5/SHA-1 = cryptographic hash functions, fast by design — which makes them catastrophically bad for passwords (rainbow tables crack them in seconds).
+- ECB = Electronic Codebook
+— AES mode that encrypts each 16-byte block independently, so identical plaintext blocks produce identical ciphertext.
+- TLS = Transport Layer Security — the encryption protocol behind HTTPS.
+
+--
+
+**good** algorithms for password hashing
+
+| Algorithm | When to use                                                      |
+|-----------|------------------------------------------------------------------|
+| Argon2id  | First choice — winner of the Password Hashing Competition (2015) |
+| bcrypt    | Safe default if Argon2 isn't available; widely supported         |
+| scrypt    | Good alternative, used by some cloud providers                   |
+| PBKDF2    | When FIPS compliance is required (US government contexts)        |
+
+**Never for passwords**: MD5, SHA-1, SHA-256 — fast by design = wrong for passwords
+
+see the [Password Storage Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html) for more details
+
+Note:
+- FIPS = Federal Information Processing Standards — a set of standards published by NIST
+- general-purpose hashing: file integrity, signatures current recommendation is SHA-256 or SHA-3
+- **MD5** and **SHA-1** are both deprecated by NIST!
+
 
 --
 

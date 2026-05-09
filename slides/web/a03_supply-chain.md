@@ -30,6 +30,12 @@ npm install cross-env # → malicious package, typo of valid 'crossenv'
 
 ![crossenv package.json](./assets/crossenv-package.webp)
 
+Note:
+- correct:`crossenv` wrong:`cross-env`
+- sets env variables from .env files
+- bad package sent **all env variables** from dev machines & pipelines away
+- = tokens/passwords that could be exploited
+
 --
 
 ## Real-World Examples
@@ -44,7 +50,12 @@ npm install cross-env # → malicious package, typo of valid 'crossenv'
 - Targeted: SSH daemon on systemd-linked Linux distros
 - **Impact**: near-miss; caught before widespread deployment
 
-Note: CVE = Common Vulnerabilities and Exposures — the global identifier for publicly known vulnerabilities, managed by MITRE. Log4Shell was given a CVSS score of 10.0 (maximum). The XZ Utils backdoor (CVE-2024-3094) was discovered by Microsoft engineer Andres Freund who noticed slightly elevated CPU usage in sshd — the backdoor was caught by accident, not by any security tooling.
+Note:
+
+- CVE = Common Vulnerabilities and Exposures => MITRE.
+- Log4Shell was given a CVSS score of 10.0 (maximum).
+- The XZ Utils backdoor (CVE-2024-3094) / discovered through higher CPU usage in sshd
+— the backdoor was caught by accident, not by any security tooling.
 
 --
 

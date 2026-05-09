@@ -1,7 +1,7 @@
 ## M01:2024 — Improper Credential Usage
-**🔴 Critical** | CWE-522 · CWE-798
+**🔴 Critical** | CWE-522 / CWE-798
 
-> API keys, passwords, and tokens hardcoded in app binaries  
+> API keys, passwords, and tokens hardcoded in app binaries
 > or stored in insecure locations — extractable by anyone with the APK.
 
 --

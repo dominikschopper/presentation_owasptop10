@@ -1,7 +1,7 @@
 ## M10:2024 — Insufficient Cryptography
-**🟡 Medium** | CWE-327 · CWE-780 · CWE-326
+**🟡 Medium** | CWE-327 / CWE-780 / CWE-326
 
-> Weak algorithms, short keys, improper modes, or hardcoded keys  
+> Weak algorithms, short keys, improper modes, or hardcoded keys
 > in the app's cryptographic implementation.
 
 --

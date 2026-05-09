@@ -1,7 +1,7 @@
 ## API8:2023 — Security Misconfiguration
-**🟡 Medium** | CWE-16 · CWE-388
+**🟡 Medium** | CWE-16 / CWE-388
 
-> Same class as web misconfiguration, but API-specific:  
+> Same class as web misconfiguration, but API-specific:
 > permissive CORS, unnecessary HTTP methods, verbose errors, no TLS.
 
 Note: APIs often skip hardening steps applied to web apps. CORS wildcard is especially common because developers add it during local development and forget to restrict it in production.

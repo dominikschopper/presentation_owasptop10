@@ -1,7 +1,7 @@
 ## M07:2024 — Insufficient Binary Protections
-**🟡 Medium** | CWE-656 · CWE-693
+**🟡 Medium** | CWE-656 / CWE-693
 
-> Unprotected binaries can be reverse-engineered, tampered with,  
+> Unprotected binaries can be reverse-engineered, tampered with,
 > or repackaged — extracting secrets and bypassing business logic.
 
 --

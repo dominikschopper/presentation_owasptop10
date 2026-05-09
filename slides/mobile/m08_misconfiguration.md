@@ -1,7 +1,7 @@
 ## M08:2024 — Security Misconfiguration
-**🟡 Medium** | CWE-16 · CWE-922
+**🟡 Medium** | CWE-16 / CWE-922
 
-> Insecure build settings, overly permissive configurations,  
+> Insecure build settings, overly permissive configurations,
 > and debug features left enabled in production builds.
 
 --

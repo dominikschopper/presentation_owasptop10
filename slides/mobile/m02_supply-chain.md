@@ -1,7 +1,7 @@
 ## M02:2024 — Inadequate Supply Chain Security
-**🔴 Critical** | CWE-494 · CWE-829
+**🔴 Critical** | CWE-494 / CWE-829
 
-> Malicious or vulnerable third-party SDKs, libraries,  
+> Malicious or vulnerable third-party SDKs, libraries,
 > and build tools introduce risk into the app's supply chain.
 
 --

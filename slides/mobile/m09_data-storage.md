@@ -1,7 +1,7 @@
 ## M09:2024 — Insecure Data Storage
-**🟡 Medium** | CWE-312 · CWE-922
+**🟡 Medium** | CWE-312 / CWE-922
 
-> Sensitive data stored unencrypted on device — accessible  
+> Sensitive data stored unencrypted on device — accessible
 > to other apps, ADB backup, or physical device access.
 
 --

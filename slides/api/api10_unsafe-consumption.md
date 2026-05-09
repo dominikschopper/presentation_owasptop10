@@ -1,7 +1,7 @@
 ## API10:2023 — Unsafe Consumption of APIs
-**🟡 Medium** | CWE-345 · CWE-346
+**🟡 Medium** | CWE-345 / CWE-346
 
-> Applications implicitly trust third-party API responses  
+> Applications implicitly trust third-party API responses
 > and process them without validation — treating **external** data as safe.
 
 Note: The inverse of the other categories: instead of attackers abusing your API, this is about your code unsafely consuming someone else's API. A compromised third-party API becomes an attack vector into your system.

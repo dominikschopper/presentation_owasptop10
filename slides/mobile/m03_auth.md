@@ -1,7 +1,7 @@
 ## M03:2024 — Insecure Authentication / Authorization
-**🟠 High** | CWE-287 · CWE-285
+**🟠 High** | CWE-287 / CWE-285
 
-> Authentication performed client-side or skipped on backend;  
+> Authentication performed client-side or skipped on backend;
 > authorization not enforced per-request on the server.
 
 --

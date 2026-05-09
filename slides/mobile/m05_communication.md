@@ -1,7 +1,7 @@
 ## M05:2024 — Insecure Communication
-**🟠 High** | CWE-295 · CWE-319 · CWE-326
+**🟠 High** | CWE-295 / CWE-319 / CWE-326
 
-> Apps transmit sensitive data over insecure channels,  
+> Apps transmit sensitive data over insecure channels,
 > or disable TLS validation — enabling network interception.
 
 --

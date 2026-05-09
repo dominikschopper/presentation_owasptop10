@@ -1,7 +1,7 @@
 ## M04:2024 — Insufficient Input / Output Validation
-**🟠 High** | CWE-20 · CWE-79 · CWE-89
+**🟠 High** | CWE-20 / CWE-79 / CWE-89
 
-> Mobile apps pass user input to local databases, web views,  
+> Mobile apps pass user input to local databases, web views,
 > and backend APIs without sanitizing — enabling injection and XSS.
 
 --

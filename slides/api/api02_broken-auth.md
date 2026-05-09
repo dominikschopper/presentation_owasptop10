@@ -1,7 +1,7 @@
 ## API2:2023 — Broken Authentication
-**🔴 Critical** | CWE-287 · CWE-307 · CWE-798
+**🔴 Critical** | CWE-287 / CWE-307 / CWE-798
 
-> Weak or missing authentication mechanisms specific to APIs.  
+> Weak or missing authentication mechanisms specific to APIs.
 > Includes exposed credentials, missing rate limits, and absent MFA.
 
 Note: Different from web broken auth — APIs often have additional vectors: hardcoded API keys, leaked tokens in git, weak JWT implementations, and no lockout on token endpoints.
