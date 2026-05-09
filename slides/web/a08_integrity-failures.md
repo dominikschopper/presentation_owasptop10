@@ -1,7 +1,7 @@
 ## A08:2025 — Software & Data Integrity Failures
-**🟡 Medium** | CWE-494 · CWE-502 · CWE-565
+CWE-494 / CWE-502 / CWE-565
 
-> Assumptions about software updates, CI/CD pipelines,  
+> Assumptions about software updates, CI/CD pipelines,
 > and critical data without verifying integrity.
 
 Note: Covers insecure deserialization (moved from its own 2017 category), unsigned updates, compromised artifact repositories, and untrusted CI/CD pipelines.

@@ -9,6 +9,4 @@
 
 <br>
 
-> Each threat: **how it works** · **real-world example** · **mitigation** · **tools**
-
-Note: Use arrow keys to navigate. Right/Left = chapters. Up/Down = depth within a threat. Press S for speaker notes. Add ?print-pdf to URL for PDF export.
+> Each threat: **how it works** / **real-world example** / **mitigation** / **tools**

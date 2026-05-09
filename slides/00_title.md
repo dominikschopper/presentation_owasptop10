@@ -1,12 +1,3 @@
-# OWASP Top 10
-## Security Risks & Mitigations
+# OWASP Top 10 <br/> Web / API / Mobile / LLM
 
-<br />
-
-**Web · API · Mobile · LLM**
-
-<br />
-
-*Based on OWASP Top 10:2025 · API Security:2023 · Mobile:2024 · LLM:2025*
-
-Note: Welcome. This deck covers the four major OWASP Top 10 lists. Each threat has concrete attack examples and actionable mitigations.
+*Based on OWASP Top 10:2025 / API Security:2023 / Mobile:2024 / LLM:2025*<!-- .element: class="c-white  ta-left" -->

@@ -1,20 +1,26 @@
 ## A01:2025 — Broken Access Control
-**🔴 Critical** | CWE-284 · CWE-285 · CWE-639
+CWE-284 / CWE-285 / CWE-639
 
-> Users act outside their intended permissions.  
+> Users act outside their intended permissions.
 > Found in **100%** of tested applications. #1 since 2021.
 
-Note: Also absorbs SSRF in the 2025 edition. Covers IDOR, privilege escalation, horizontal/vertical access violations, and path traversal to restricted files.
+Note:
+**CWE**: Common Weakness Enumeration -> MITRE
+
+- Insecure Direct Object Reference = IDOR
+- privilege escalation,
+- horizontal/vertical access violations,
+- path traversal to restricted files.
 
 --
 
 ## How It Works
 
-**Insecure Direct Object Reference (IDOR)** — user controls an ID that maps to a resource they don't own:
+**Insecure Direct Object Reference** — user controls an ID that maps to a resource they have no rights on:
 
 ```http
-GET /api/invoices/1042    → attacker's invoice  ✓
-GET /api/invoices/1043    → victim's invoice    ✓  ← no check!
+GET /api/invoices/1042    → my own invoice
+GET /api/invoices/1043    → someone elses invoice
 ```
 
 **Missing function-level authorization** — restricted endpoints are hidden in the UI but not protected on the server:
@@ -27,20 +33,25 @@ app.delete('/admin/users/:id', (req, res) => {
 });
 ```
 
-Note: IDOR = Insecure Direct Object Reference — the user supplies an identifier (order ID, account number) that directly references a server-side object, and the server doesn't verify ownership. SSRF = Server-Side Request Forgery — server fetches a URL controlled by the attacker; absorbed into A01 in the 2025 edition.
+Note:
+**IDOR = Insecure Direct Object Reference**
+
+— attacker uses an order ID, account number
+- server doesn't verify ownership.
+- SSRF = Server-Side Request Forgery — server fetches a URL controlled by the attacker; absorbed into A01 in the 2025 edition.
 
 --
 
 ## Real-World Examples
 
 **Optus Data Breach (2022)**
-- Unauthenticated API endpoint returned customer PII for any sequential customer ID
+- API endpoint returned customer any customer ID
 - **Impact**: ~10 million Australians' data exposed (names, DOB, passport/licence numbers)
 
-**MOVEit Transfer — CVE-2023-34362**
-- SQL injection + missing auth on file-transfer endpoints
-- Cl0p ransomware group used it to exfiltrate data from 2,000+ organizations, 62M+ individuals
-- Victims: British Airways, BBC, Zellis, US govt agencies
+**Facebook/Instagram IDOR (2021) — "IGShopping"**
+- access any Instagram user's shopping orders through any ID in API calls
+- No ownership check on the order endpoint
+- **Impact**: ~$30,000 bug bounty; clean IDOR, no SQLi involved
 
 --
 

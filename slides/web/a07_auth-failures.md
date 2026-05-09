@@ -1,7 +1,7 @@
 ## A07:2025 — Identification & Authentication Failures
-**🟠 High** | CWE-287 · CWE-295 · CWE-384
+CWE-287 / CWE-295 / CWE-384
 
-> Weak or broken authentication and session management.  
+> Weak or broken authentication and session management.
 > Allows attackers to assume other users' identities.
 
 Note: Previously called "Broken Authentication" (2017). Expanded in 2021/2025 to include identification failures. Includes credential stuffing, session fixation, weak MFA, and insecure session management.

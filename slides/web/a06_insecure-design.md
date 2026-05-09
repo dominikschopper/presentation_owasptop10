@@ -1,7 +1,7 @@
 ## A06:2025 — Insecure Design
-**🟠 High** | CWE-73 · CWE-183 · CWE-209
+CWE-73 / CWE-183 / CWE-209
 
-> Flaws in architecture and design — not coding bugs,  
+> Flaws in architecture and design — not coding bugs,
 > but **missing or ineffective security controls by design**.
 
 Note: Unlike the other categories, this can't be fixed by a patch. It requires rethinking the system's design. Threat modeling is the key preventive practice.

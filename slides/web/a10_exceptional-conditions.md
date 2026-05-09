@@ -1,10 +1,14 @@
 ## A10:2025 — Mishandling of Exceptional Conditions
-**🟡 Medium** | CWE-390 · CWE-391 · CWE-703 · CWE-754
+CWE-390 / CWE-391 / CWE-703 / CWE-754
 
-> Poor error handling, logical flaws, and insecure failure states  
+> Poor error handling, logical flaws, and insecure failure states
 > expose sensitive data or enable DoS. **New in 2025.**
 
-Note: This replaces SSRF (now part of A01). Covers: information disclosure via stack traces, logic errors in error paths (e.g., auth bypass when exception occurs), resource exhaustion, and fail-open vs fail-safe behavior.
+Note:
+- information disclosure via stack traces,
+- logic errors in error paths (e.g., auth bypass when exception occurs),
+- resource exhaustion,
+- fail-open vs fail-safe behavior.
 
 --
 
@@ -33,9 +37,12 @@ def require_auth(f):
         except Exception:
             pass  # ← exception swallowed → request proceeds unauthenticated!
         return f(*args, **kwargs)
-
-Note: DoS = Denial of Service — making a system unavailable. OGNL = Object-Graph Navigation Language — an expression language embedded in Apache Struts that evaluates expressions at runtime. The fail-open pattern (exception → access granted) is a classic logic error in error handling paths.
 ```
+
+Note:
+- DoS = Denial of Service — making a system unavailable.
+- OGNL = Object-Graph Navigation Language — an expression language embedded in Apache Struts that evaluates expressions at runtime.
+- The fail-open pattern (exception → access granted) is a classic logic error in error handling paths.
 
 --
 
@@ -54,7 +61,13 @@ if (md5($password) == $hash) { ... }
 // == 0 == md5('QNKCDZO') → authentication bypass
 ```
 
-Note: CVE-2017-5638 was patched by Apache Struts in March 2017 — Equifax was breached in May 2017, two months after the patch. The root cause was both an error-handling design flaw AND a failure to apply a known patch. PHP type juggling is a design flaw in PHP's loose comparison operator (==) that treats strings starting with "0e" as scientific notation floats equal to zero.
+Note:
+- CVE-2017-5638 patched in Apache Struts in March 2017
+- Equifax was breached in May 2017 (2 months after).
+- root cause an error-handling design flaw
+- AND not updating.
+
+PHP type juggling is a design flaw in PHP's loose comparison operator (==) like in JS
 
 --
 

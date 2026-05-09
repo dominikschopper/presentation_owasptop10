@@ -1,7 +1,7 @@
 ## A02:2025 — Security Misconfiguration
-**🔴 Critical** | CWE-16 · CWE-611
+CWE-16 / CWE-611
 
-> Insecure defaults, incomplete setup, unnecessary features, missing hardening.  
+> Insecure defaults, incomplete setup, unnecessary features, missing hardening.
 > Found in **90%** of tested applications. Moved from #5 → #2 in 2025.
 
 Note: Includes XXE (XML External Entities) which was its own category in 2017. Cloud misconfigurations are a major driver of the ranking jump.

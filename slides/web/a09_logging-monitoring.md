@@ -1,7 +1,7 @@
 ## A09:2025 — Security Logging & Monitoring Failures
-**🟡 Medium** | CWE-117 · CWE-223 · CWE-532 · CWE-778
+CWE-117 / CWE-223 / CWE-532 / CWE-778
 
-> Without adequate logging and alerting, attacks go undetected.  
+> Without adequate logging and alerting, attacks go undetected.
 > Average time to detect a breach: **204 days** (IBM 2023).
 
 Note: This category is about detection capability, not prevention. Even if you're breached, good logging limits damage through faster detection and better forensics.

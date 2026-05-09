@@ -1,5 +1,5 @@
 ## A03:2025 — Software Supply Chain Failures
-**🔴 Critical** | CWE-494 · CWE-829 · CWE-1357
+CWE-494 / CWE-829 / CWE-1357
 
 > Vulnerabilities introduced through third-party components,
 > build pipelines, and update mechanisms. **New in 2025.**

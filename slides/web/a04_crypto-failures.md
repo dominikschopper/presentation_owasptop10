@@ -1,7 +1,7 @@
 ## A04:2025 — Cryptographic Failures
-**🟠 High** | CWE-261 · CWE-296 · CWE-310 · CWE-319
+CWE-261 / CWE-296 / CWE-310 / CWE-319
 
-> Weak or absent cryptography leading to exposure of sensitive data.  
+> Weak or absent cryptography leading to exposure of sensitive data.
 > Previously "Sensitive Data Exposure" — 2025 focuses on the **root cause**.
 
 Note: Covers everything from storing passwords in plain text, using deprecated algorithms (MD5, SHA-1, DES), missing TLS, to subtle implementation errors like ECB mode or unauthenticated encryption.
