@@ -1,0 +1,163 @@
+.c-orange {
+  color: #FD6202;
+}
+
+.reveal:has(.slides .present.bg-orange) {
+  background-color: #FD6202;
+}
+
+.c-black {
+  color: #131313;
+}
+
+.reveal:has(.slides .present.bg-black) {
+  background-color: #131313;
+}
+
+.c-white {
+  color: #FFFFFF;
+}
+
+.reveal:has(.slides .present.bg-white) {
+  background-color: #FFFFFF;
+}
+
+.c-blue {
+  color: #5072FB;
+}
+
+.reveal:has(.slides .present.bg-blue) {
+  background-color: #5072FB;
+}
+
+.c-purple {
+  color: #8566ED;
+}
+
+.reveal:has(.slides .present.bg-purple) {
+  background-color: #8566ED;
+}
+
+.c-green {
+  color: #60D391;
+}
+
+.reveal:has(.slides .present.bg-green) {
+  background-color: #60D391;
+}
+
+.c-pink {
+  color: #FD6893;
+}
+
+.reveal:has(.slides .present.bg-pink) {
+  background-color: #FD6893;
+}
+
+.c-palepink {
+  color: #F8C5E3;
+}
+
+.reveal:has(.slides .present.bg-palepink) {
+  background-color: #F8C5E3;
+}
+
+.c-grey-black {
+  color: #131313;
+}
+
+.reveal:has(.slides .present.bg-grey-black) {
+  background-color: #131313;
+}
+
+.c-grey {
+  color: #898584;
+}
+
+.reveal:has(.slides .present.bg-grey) {
+  background-color: #898584;
+}
+
+.c-grey-light {
+  color: #C2BCBC;
+}
+
+.reveal:has(.slides .present.bg-grey-light) {
+  background-color: #C2BCBC;
+}
+
+.c-blue-light {
+  color: #AEBAFA;
+}
+
+.reveal:has(.slides .present.bg-blue-light) {
+  background-color: #AEBAFA;
+}
+
+.c-purple-light {
+  color: #CFCAFC;
+}
+
+.reveal:has(.slides .present.bg-purple-light) {
+  background-color: #CFCAFC;
+}
+
+.c-green-light {
+  color: #ABF1C7;
+}
+
+.reveal:has(.slides .present.bg-green-light) {
+  background-color: #ABF1C7;
+}
+
+.c-pink-light {
+  color: #FFB8CA;
+}
+
+.reveal:has(.slides .present.bg-pink-light) {
+  background-color: #FFB8CA;
+}
+
+.c-palepink-light {
+  color: #FDE1F1;
+}
+
+.reveal:has(.slides .present.bg-palepink-light) {
+  background-color: #FDE1F1;
+}
+
+.reveal .slides .present.trennblatt h1 {
+  margin-bottom: 45%;
+  margin-right: 25%;
+  outline: 2px dotted fuchsia;
+}
+
+.reveal .slides .present.trennblatt h2 {
+  margin-bottom: 45%;
+  margin-right: 25%;
+  outline: 2px dotted fuchsia;
+}
+
+.reveal .slides .present.trennblatt h3 {
+  margin-bottom: 45%;
+  margin-right: 25%;
+  outline: 2px dotted fuchsia;
+}
+
+.reveal .slides .present.trennblatt h4 {
+  margin-bottom: 45%;
+  margin-right: 25%;
+  outline: 2px dotted fuchsia;
+}
+
+.reveal .slides .present.trennblatt h5 {
+  margin-bottom: 45%;
+  margin-right: 25%;
+  outline: 2px dotted fuchsia;
+}
+
+.reveal .slides .present.trennblatt h6 {
+  margin-bottom: 45%;
+  margin-right: 25%;
+  outline: 2px dotted fuchsia;
+}

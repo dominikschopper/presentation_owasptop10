@@ -1,0 +1,29 @@
+:root {
+
+    /* primary */
+    --c-orange: #FD6202;
+    --c-black: #131313;
+    --c-white: #FFFFFF;
+
+    /* secondary */
+    --c-blue: #5072FB;
+    --c-purple: #8566ED;
+    --c-green: #60D391;
+
+    /* tertiary */
+    --c-pink: #FD6893;
+    --c-palepink: #F8C5E3;
+
+    /* greys */
+    --c-grey-black: #131313;
+    --c-grey: #898584;
+    --c-grey-light: #C2BCBC;
+
+    /* derivates */
+    --c-blue-light: #AEBAFA;
+    --c-purple-light: #CFCAFC;
+    --c-green-light: #ABF1C7;
+    --c-pink-light: #FFB8CA;
+    --c-palepink-light: #FDE1F1;
+
+}

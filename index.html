@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OWASP Top 10 — Security Risks & Mitigations</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+  <link rel="stylesheet" href="themes/cofinpro.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/styles/github.min.css">
+
+  <style>
+    /* ── Presentation-specific additions on top of the Cofinpro theme ──
+       All colors reference the Cofinpro CI palette from _cofinpro-variables.css:
+       orange #FD6202 · black #131313 · blue #5072FB · purple #8566ED · green #60D391
+       pink #FD6893 · grey #898584 · grey-light #C2BCBC
+    ── */
+
+    /* Chapter subtitle lines inside trennblatt slides */
+    .edition  { font-size: 0.55em; color: rgba(255,255,255,0.65); font-family: monospace; }
+    .subtitle { font-size: 0.75em; color: rgba(255,255,255,0.85); margin-top: 0.6em; line-height: 1.5; }
+
+    /* Blockquote — orange left bar, fits light background */
+    .reveal blockquote {
+      border-left: 4px solid var(--c-orange);
+      background: rgba(253, 98, 2, 0.06);
+      color: var(--c-black);
+      font-style: normal;
+      padding: 0.6em 1em;
+      width: 88%;
+    }
+
+    /* Risk badges */
+    .badge {
+      display: inline-block;
+      padding: 0.1em 0.55em;
+      border-radius: 3px;
+      font-size: 0.5em;
+      font-weight: 700;
+      vertical-align: middle;
+      margin-left: 0.5em;
+      letter-spacing: 0.03em;
+    }
+    .badge-critical { background: var(--c-orange);  color: #fff; }
+    .badge-high     { background: var(--c-blue);    color: #fff; }
+    .badge-medium   { background: var(--c-purple);  color: #fff; }
+
+    /* Threat title slide — risk indicator under the heading */
+    .reveal .risk-line {
+      font-size: 0.65em;
+      color: var(--c-grey);
+      margin-top: -0.5em;
+      margin-bottom: 1em;
+    }
+    .risk-critical { color: var(--c-orange); font-weight: 700; }
+    .risk-high     { color: var(--c-blue);   font-weight: 700; }
+    .risk-medium   { color: var(--c-purple); font-weight: 700; }
+
+    /* Overview tables — orange header row */
+    .reveal table th {
+      background: var(--c-orange);
+      color: #fff;
+      border-color: var(--c-orange);
+    }
+    .reveal table td { border-color: var(--c-grey-light); }
+    .reveal table tbody tr:hover td { background: rgba(253,98,2,0.05); }
+    /* links in tables use purple (already theme default, reinforcing) */
+    .reveal table a { color: var(--c-purple); }
+
+    /* Code blocks — light github theme, thin border for definition on white bg */
+    .reveal pre {
+      font-size: 0.62em;
+      border-radius: 6px;
+      border: 1px solid var(--c-grey-light);
+      box-shadow: none;
+    }
+
+    /* Inline code on light bg */
+    .reveal :not(pre) > code {
+      background: rgba(253,98,2,0.08);
+      color: var(--c-orange);
+      border-radius: 3px;
+      padding: 0.05em 0.3em;
+    }
+
+    /* Two-column grid helper */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5em;
+      align-items: start;
+    }
+
+    /* Incident / example highlight box */
+    .incident {
+      background: rgba(253,98,2,0.06);
+      border: 1px solid var(--c-grey-light);
+      border-left: 4px solid var(--c-orange);
+      border-radius: 4px;
+      padding: 0.6em 1em;
+      margin: 0.4em 0;
+      font-size: 0.82em;
+      text-align: left;
+    }
+    .incident .title { font-weight: 700; color: var(--c-orange); }
+
+    /* Green "fixed" annotation, orange "vulnerable" annotation */
+    .label-fixed { color: var(--c-green); font-weight: 700; font-size: 0.75em; }
+    .label-vuln  { color: var(--c-orange); font-weight: 700; font-size: 0.75em; }
+
+    /* PDF export */
+    @media print {
+      .reveal .slides section { page-break-after: always; }
+    }
+  </style>
+</head>
+<body>
+<div class="reveal">
+  <div class="slides">
+
+    <!-- ═══ INTRO ═══ -->
+    <section data-markdown="slides/00_title.md" class="trennblatt trennblatt-orange"></section>
+    <section data-markdown="slides/01_all-chapters-overview.md"></section>
+
+    <!-- ═══ CHAPTER 1: WEB APP TOP 10:2025 ═══ -->
+    <section data-markdown="slides/web/00_chapter.md"  class="trennblatt trennblatt-blue" id="chapter-web"></section>
+    <section data-markdown="slides/web/01_overview.md" id="web-overview"></section>
+    <section data-markdown="slides/web/a01_access-control.md"         data-separator-vertical="^\n--\n" id="web-a01"></section>
+    <section data-markdown="slides/web/a02_misconfiguration.md"        data-separator-vertical="^\n--\n" id="web-a02"></section>
+    <section data-markdown="slides/web/a03_supply-chain.md"            data-separator-vertical="^\n--\n" id="web-a03"></section>
+    <section data-markdown="slides/web/a04_crypto-failures.md"         data-separator-vertical="^\n--\n" id="web-a04"></section>
+    <section data-markdown="slides/web/a05_injection.md"               data-separator-vertical="^\n--\n" id="web-a05"></section>
+    <section data-markdown="slides/web/a06_insecure-design.md"         data-separator-vertical="^\n--\n" id="web-a06"></section>
+    <section data-markdown="slides/web/a07_auth-failures.md"           data-separator-vertical="^\n--\n" id="web-a07"></section>
+    <section data-markdown="slides/web/a08_integrity-failures.md"      data-separator-vertical="^\n--\n" id="web-a08"></section>
+    <section data-markdown="slides/web/a09_logging-monitoring.md"      data-separator-vertical="^\n--\n" id="web-a09"></section>
+    <section data-markdown="slides/web/a10_exceptional-conditions.md"  data-separator-vertical="^\n--\n" id="web-a10"></section>
+
+    <!-- ═══ CHAPTER 2: API TOP 10:2023 ═══ -->
+    <section data-markdown="slides/api/00_chapter.md"  class="trennblatt trennblatt-green" id="chapter-api"></section>
+    <section data-markdown="slides/api/01_overview.md" id="api-overview"></section>
+    <section data-markdown="slides/api/api01_bola.md"                  data-separator-vertical="^\n--\n" id="api-01"></section>
+    <section data-markdown="slides/api/api02_broken-auth.md"           data-separator-vertical="^\n--\n" id="api-02"></section>
+    <section data-markdown="slides/api/api03_bopla.md"                 data-separator-vertical="^\n--\n" id="api-03"></section>
+    <section data-markdown="slides/api/api04_resource-consumption.md"  data-separator-vertical="^\n--\n" id="api-04"></section>
+    <section data-markdown="slides/api/api05_bfla.md"                  data-separator-vertical="^\n--\n" id="api-05"></section>
+    <section data-markdown="slides/api/api06_business-flows.md"        data-separator-vertical="^\n--\n" id="api-06"></section>
+    <section data-markdown="slides/api/api07_ssrf.md"                  data-separator-vertical="^\n--\n" id="api-07"></section>
+    <section data-markdown="slides/api/api08_misconfiguration.md"      data-separator-vertical="^\n--\n" id="api-08"></section>
+    <section data-markdown="slides/api/api09_inventory.md"             data-separator-vertical="^\n--\n" id="api-09"></section>
+    <section data-markdown="slides/api/api10_unsafe-consumption.md"    data-separator-vertical="^\n--\n" id="api-10"></section>
+
+    <!-- ═══ CHAPTER 3: MOBILE TOP 10:2024 ═══ -->
+    <section data-markdown="slides/mobile/00_chapter.md"  class="trennblatt trennblatt-lightpink" id="chapter-mobile"></section>
+    <section data-markdown="slides/mobile/01_overview.md" id="mobile-overview"></section>
+    <section data-markdown="slides/mobile/m01_credential-usage.md"    data-separator-vertical="^\n--\n" id="mobile-01"></section>
+    <section data-markdown="slides/mobile/m02_supply-chain.md"        data-separator-vertical="^\n--\n" id="mobile-02"></section>
+    <section data-markdown="slides/mobile/m03_auth.md"                data-separator-vertical="^\n--\n" id="mobile-03"></section>
+    <section data-markdown="slides/mobile/m04_input-validation.md"    data-separator-vertical="^\n--\n" id="mobile-04"></section>
+    <section data-markdown="slides/mobile/m05_communication.md"       data-separator-vertical="^\n--\n" id="mobile-05"></section>
+    <section data-markdown="slides/mobile/m06_privacy.md"             data-separator-vertical="^\n--\n" id="mobile-06"></section>
+    <section data-markdown="slides/mobile/m07_binary-protections.md"  data-separator-vertical="^\n--\n" id="mobile-07"></section>
+    <section data-markdown="slides/mobile/m08_misconfiguration.md"    data-separator-vertical="^\n--\n" id="mobile-08"></section>
+    <section data-markdown="slides/mobile/m09_data-storage.md"        data-separator-vertical="^\n--\n" id="mobile-09"></section>
+    <section data-markdown="slides/mobile/m10_cryptography.md"        data-separator-vertical="^\n--\n" id="mobile-10"></section>
+
+    <!-- ═══ CHAPTER 4: LLM TOP 10:2025 ═══ -->
+    <section data-markdown="slides/llm/00_chapter.md"  class="trennblatt trennblatt-green" id="chapter-llm"></section>
+    <section data-markdown="slides/llm/01_overview.md" id="llm-overview"></section>
+    <section data-markdown="slides/llm/llm01_prompt-injection.md"      data-separator-vertical="^\n--\n" id="llm-01"></section>
+    <section data-markdown="slides/llm/llm02_sensitive-disclosure.md"  data-separator-vertical="^\n--\n" id="llm-02"></section>
+    <section data-markdown="slides/llm/llm03_supply-chain.md"          data-separator-vertical="^\n--\n" id="llm-03"></section>
+    <section data-markdown="slides/llm/llm04_data-poisoning.md"        data-separator-vertical="^\n--\n" id="llm-04"></section>
+    <section data-markdown="slides/llm/llm05_output-handling.md"       data-separator-vertical="^\n--\n" id="llm-05"></section>
+    <section data-markdown="slides/llm/llm06_excessive-agency.md"      data-separator-vertical="^\n--\n" id="llm-06"></section>
+    <section data-markdown="slides/llm/llm07_prompt-leakage.md"        data-separator-vertical="^\n--\n" id="llm-07"></section>
+    <section data-markdown="slides/llm/llm08_vector-weaknesses.md"     data-separator-vertical="^\n--\n" id="llm-08"></section>
+    <section data-markdown="slides/llm/llm09_misinformation.md"        data-separator-vertical="^\n--\n" id="llm-09"></section>
+    <section data-markdown="slides/llm/llm10_unbounded-consumption.md" data-separator-vertical="^\n--\n" id="llm-10"></section>
+
+    <!-- ═══ CLOSING ═══ -->
+    <section data-markdown="slides/99_closing.md" data-separator-vertical="^\n--\n" class="trennblatt trennblatt-blue"></section>
+
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/markdown/markdown.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/notes/notes.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/highlight/highlight.js"></script>
+<script>
+  Reveal.initialize({
+    hash: true,
+    slideNumber: 'c/t',
+    progress: true,
+    controls: true,
+    center: true,
+    transition: 'slide',
+    transitionSpeed: 'fast',
+    backgroundTransition: 'fade',
+    navigationMode: 'linear',
+
+    // PDF: append ?print-pdf to URL, then print from browser (Chrome recommended)
+    // or: npx decktape reveal http://localhost:PORT?print-pdf output.pdf
+    pdfSeparateFragments: false,
+    pdfMaxPagesPerSlide: 1,
+
+    plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ],
+  });
+</script>
+</body>
+</html>
