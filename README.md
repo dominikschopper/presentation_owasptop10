@@ -9,4 +9,4 @@ it is organized in three chapters
 3. OWASP Top 10 mobile (al things mobile)
 4. OWASP Top 10 LLM (the crazy new stuff)
 
-all of that is done as a reveal.js presentation and can be viewed in the [github pages of this repo](https://dominikschopper.github.io/presentation_owasptop10/)
+all of that is done as a [reveal.js presentation](https://revealjs.com/) and can be viewed in the [github pages of this repo](https://dominikschopper.github.io/presentation_owasptop10/)
